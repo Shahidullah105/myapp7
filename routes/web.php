@@ -7,8 +7,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
-//use App\Http\Controllers\InvoiceController;
-//use App\Http\Controllers\SettingController;
+use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\SettingController;
 
 
 
@@ -77,6 +77,16 @@ Route::middleware('auth')->group(function () {
     
     });
 
+    Route::get('/productlist', [ProductController::class, 'ProductList'])->name('product')->middleware('auth');
+
+Route::get('/view/salelist/{id}', [InvoiceController::class, 'salelist'])->name('salelist');
+Route::get('/delete/invoice/{id}', [InvoiceController::class, 'destroy'])->name('invoices.destroy');
+Route::get('/customerlist', [CustomerController::class, 'customerlist'])->middleware('auth');
+Route::get('/sale', [InvoiceController::class, 'sale'])->name('sale')->middleware('auth');
+Route::post('/invoices', [InvoiceController::class, 'submitInvoice'])->name('submitInvoice')->middleware('auth');
+Route::get('/invoices/show', [InvoiceController::class, 'index'])->name('invoices.index')->middleware('auth');
+Route::get('/setting', [SettingController::class, 'edit'])->middleware('auth');
+Route::post('/setting/update', [SettingController::class, 'update'])->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
