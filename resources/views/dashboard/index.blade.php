@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('content')  
+@section('content') 
 <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "dark", "size": "default", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
 
 <!-- Page Title Section -->

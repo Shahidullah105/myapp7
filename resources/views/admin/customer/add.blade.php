@@ -1,10 +1,10 @@
 @extends('layouts.master')
 
-@section('content')  
+@section('content') 
 <div class="card mx-auto shadow-sm border-0" style="max-height: 480px; max-width: 950px;">
     <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-1">
         <h5 class="mb-0">Add Customer</h5>
-        <a href="{{ url('/customer/show') }}" class="btn btn-outline-light btn-sm">View Customer</a>
+        <a href="{{ url('/customer/show') }}" class="btn btn-outline-light btn-sm">View Customers</a>
     </div>
 
     <div class="card-body px-4 py-3">

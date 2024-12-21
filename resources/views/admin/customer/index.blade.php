@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('content') 
+@section('content')
 <div class="container">
     <div class=""> 
         <div class="card-header d-flex justify-content-between align-items-center">

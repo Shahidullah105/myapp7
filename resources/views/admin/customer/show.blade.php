@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="card "> 
+<div class="card ">
     <div class="card-header d-flex w-36 h-11 "> 
         <div class="mx-5 mt-2">
        @can('customer-create')
